@@ -39,6 +39,10 @@ class FarmPlannerResponse(BaseModel):
 
 app = FastAPI()
 
+@app.get("/")
+def health_check():
+    return {"status": "AnnDaataa API is awake and running!"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
