@@ -39,6 +39,7 @@ class FarmPlannerResponse(BaseModel):
 
 app = FastAPI()
 
+@app.head("/")
 @app.get("/")
 def health_check():
     return {"status": "AnnDaataa API is awake and running!"}
